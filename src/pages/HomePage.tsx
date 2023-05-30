@@ -1,10 +1,9 @@
-import { GetPopularMovies } from "../components/GetPopularMovies";
+import { PopularMovies } from "../components/PopularMovies";
 
 export const HomePage = () => {
   return (
-    <section>
-      <h1 className="grid place-items-center text-5xl p-5">TMDB</h1>
-      <GetPopularMovies />
+    <section className="grid md:grid-cols-4 place-items-center gap-5 m-10">
+      <PopularMovies />
     </section>
   );
 };

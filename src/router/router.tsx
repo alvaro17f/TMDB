@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "../layout/Layout";
 import { HomePage } from "../pages/HomePage";
+import { MoviePage } from "../pages/MoviePage";
+import { SearchPage } from "../pages/SearchPage";
 
 export const router = createBrowserRouter([
   {
@@ -12,12 +14,12 @@ export const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/podcast/:podcastId",
-        // element: <PodcastDetailPage />,
+        path: "/movie/:movieId",
+        element: <MoviePage />,
       },
       {
-        path: "/podcast/:podcastId/episode/:episodeId",
-        // element: <EpisodeDetailPage />,
+        path: "/search/:searchQuery",
+        element: <SearchPage />,
       },
     ],
   },
