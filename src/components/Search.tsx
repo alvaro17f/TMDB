@@ -6,12 +6,12 @@ export const Search = () => {
   const [query, setQuery] = useState("");
 
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
-    setQuery(e.target.value.trim());
+    setQuery(e.target.value);
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     if (query.length === 0) return e.preventDefault();
-    navigate(`/search/${query}/1`);
+    navigate(`/search/${query.trim()}/1`);
   };
   return (
     <form onSubmit={handleSubmit} className="flex flex-row-reverse">
