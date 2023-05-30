@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
         element: <MoviePage />,
       },
       {
-        path: "/search/:searchQuery",
+        path: "/search/:searchQuery/:page",
         element: <SearchPage />,
       },
     ],

@@ -11,7 +11,7 @@ export const Search = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     if (query.length === 0) return e.preventDefault();
-    navigate(`/search/${query}`);
+    navigate(`/search/${query}/1`);
   };
   return (
     <form onSubmit={handleSubmit} className="flex flex-row-reverse">
