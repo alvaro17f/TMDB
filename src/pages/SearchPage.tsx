@@ -8,7 +8,7 @@ export const SearchPage = () => {
   const { data, loading, results } = useFetchSearch();
 
   if (loading) return <div className="text-5xl text-center">Loading ...</div>;
-  if (data.length === 0)
+  if (data?.length === 0)
     return <div className="text-5xl text-center">No results</div>;
   return (
     <>

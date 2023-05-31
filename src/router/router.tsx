@@ -3,6 +3,7 @@ import { Layout } from "../layout/Layout";
 import { HomePage } from "../pages/HomePage";
 import { MoviePage } from "../pages/MoviePage";
 import { SearchPage } from "../pages/SearchPage";
+import { MyListPage } from "../pages/MyListPage";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
       {
         path: "/search/:searchQuery/:page",
         element: <SearchPage />,
+      },
+      {
+        path: "/mylist",
+        element: <MyListPage />,
       },
     ],
   },

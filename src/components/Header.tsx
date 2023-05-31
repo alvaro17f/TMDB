@@ -3,7 +3,7 @@ import { Search } from "./Search";
 
 export const Header = () => {
   return (
-    <header className="flex items-center h-20 pl-5 mb-10 shadow-md">
+    <header className="flex items-center h-20 pl-5 shadow-md">
       <div className="text-5xl text-slate-400">
         <Link to="/">TMDB</Link>
       </div>
