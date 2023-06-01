@@ -8,12 +8,11 @@ export const useFetchRating = ({ value }: RatingProps) => {
   const [loading, setLoading] = useState(false);
 
   const { state } = useUserContext();
-  const guest_session_id = state?.guest_session_id;
   const params = useParams();
 
   const URL = `https://api.themoviedb.org/3/movie/${
     params.movieId
-  }/rating?guest_session_id=${guest_session_id}&api_key=${
+  }/rating?guest_session_id=${state?.guest_session_id}&api_key=${
     import.meta.env.VITE_API_KEY
   }`;
 
