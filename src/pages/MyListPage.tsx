@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import { useFetchList } from "../hooks/useFetchList";
+import { useUserContext } from "../Providers/UserProvider";
 
 const IMG_URL = "https://image.tmdb.org/t/p/original";
 
 export const MyListPage = () => {
   const { data, loading } = useFetchList();
+  const {state} =useUserContext()
 
   if (loading) return <div className="mt-5 text-5xl text-center">Loading ...</div>;
-  if (!data) return <div className="mt-5 text-5xl text-center">You must click on "😀 Get ID" first...</div>
+  if (!state?.guest_session_id) return <div className="mt-5 text-5xl text-center">You must click on "😀 Get ID" first...</div>
   return (
     <section className="m-5">
       <h1 className="mb-5 text-5xl">MY LIST</h1>
