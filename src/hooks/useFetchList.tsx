@@ -7,7 +7,7 @@ export const useFetchList = () => {
   const [loading, setLoading] = useState(false);
   
   const { state } = useUserContext();
-  const guest_session_id = state.guest_session_id;
+  const guest_session_id = state?.guest_session_id;
 
   const URL = `https://api.themoviedb.org/3/guest_session/${guest_session_id}/rated/movies?api_key=${
     import.meta.env.VITE_API_KEY

@@ -8,7 +8,7 @@ export const useFetchRating = ({ value }: RatingProps) => {
   const [loading, setLoading] = useState(false);
 
   const { state } = useUserContext();
-  const guest_session_id = state.guest_session_id;
+  const guest_session_id = state?.guest_session_id;
   const params = useParams();
 
   const URL = `https://api.themoviedb.org/3/movie/${

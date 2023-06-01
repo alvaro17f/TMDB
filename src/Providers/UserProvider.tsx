@@ -1,7 +1,7 @@
 import { createContext, useContext, useReducer } from "react";
-import { GuestActionType, GuestType } from "../types/types";
+import { GuestActionType, GuestType, UserContextType } from "../types/types";
 
-const UserContext = createContext();
+const UserContext = createContext<UserContextType>({});
 
 const useUserContext = () => {
   return useContext(UserContext);

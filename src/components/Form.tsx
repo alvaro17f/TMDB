@@ -17,7 +17,7 @@ export const Form = () => {
     request();
   };
   if (loading) return <div className="text-2xl text-center">LOADING...</div>;
-  if (!state.guest_session_id) return <div className="text-2xl text-center">You must click on "😀 Get ID" first...</div>;
+  if (!state?.guest_session_id) return <div className="text-2xl text-center">You must click on "😀 Get ID" first...</div>;
   return (
     <form onSubmit={handleSubmit}>
       <div className="grid grid-cols-2 p-5 place-items-center">

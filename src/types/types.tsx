@@ -5,6 +5,8 @@
 //   total_results: number;
 // }
 
+import { Dispatch } from "react";
+
 export type PopularType = {
   adult: boolean;
   backdrop_path: string;
@@ -139,7 +141,7 @@ export type ListType = {
 }[];
 
 export type GuestType = {
-  expires_at?: string;
+  expires_at?: Date;
   guest_session_id?: string;
   success?: boolean;
 };
@@ -147,4 +149,9 @@ export type GuestType = {
 export type GuestActionType = {
   type: string;
   payload: GuestType;
+};
+
+export type UserContextType = {
+  state?: GuestType;
+  dispatch?: Dispatch<GuestActionType>;
 };

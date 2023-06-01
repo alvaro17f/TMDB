@@ -15,7 +15,7 @@ export const useFetchGuest = () => {
     fetch(URL)
       .then((resp) => resp.json())
       .then((data) =>
-        dispatch({
+        dispatch?.({
           type: "CREATE_GUEST_SESSION",
           payload: data,
         }),

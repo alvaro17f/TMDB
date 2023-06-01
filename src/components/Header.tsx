@@ -17,8 +17,8 @@ export const Header = () => {
         <Link to="/">TMDB</Link>
       </div>
       <div className="flex items-baseline gap-5 m-auto mr-5 text-gray-800">
-        {state.guest_session_id ? (
-          <p>Expires at: {new Date(state.expires_at).toLocaleDateString()}</p>
+        {state?.guest_session_id ? (
+          <p>Expires at: {new Date(state.expires_at as Date).toLocaleDateString()}</p>
         ) : (
           <button type="button" onClick={handleClick}>
             😀 Get ID
