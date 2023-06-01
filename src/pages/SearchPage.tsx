@@ -15,7 +15,7 @@ export const SearchPage = () => {
       <section className="grid gap-5 m-10 md:grid-cols-4 place-items-center">
         {data?.map((movie) => (
           <Link
-            id={String(movie.id)}
+            key={String(movie.id)}
             to={`/movie/${movie.id}`}
             className="border rounded-xl w-56 h-[30rem]"
           >
