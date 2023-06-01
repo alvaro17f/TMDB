@@ -6,7 +6,8 @@ const IMG_URL = "https://image.tmdb.org/t/p/original";
 export const MyListPage = () => {
   const { data, loading } = useFetchList();
 
-  if (loading) return <div className="text-5xl text-center">Loading ...</div>;
+  if (loading) return <div className="mt-5 text-5xl text-center">Loading ...</div>;
+  if (!data) return <div className="mt-5 text-5xl text-center">You must click on "😀 Get ID" first...</div>
   return (
     <section className="m-5">
       <h1 className="mb-5 text-5xl">MY LIST</h1>

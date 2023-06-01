@@ -1,8 +1,11 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useFetchRating } from "../hooks/useFetchRating";
+import { useUserContext } from "../Providers/UserProvider";
 
 export const Form = () => {
   const [rating, setRating] = useState(2.5);
+  
+  const { state } = useUserContext();
 
   const handleRating = (e: ChangeEvent<HTMLInputElement>) => {
     setRating(Number(e.target.value));
@@ -13,9 +16,9 @@ export const Form = () => {
     e.preventDefault();
     request();
   };
-  return loading ? (
-    <div>LOADING...</div>
-  ) : (
+  if (loading) return <div className="text-2xl text-center">LOADING...</div>;
+  if (!state.guest_session_id) return <div className="text-2xl text-center">You must click on "😀 Get ID" first...</div>;
+  return (
     <form onSubmit={handleSubmit}>
       <div className="grid grid-cols-2 p-5 place-items-center">
         <div>

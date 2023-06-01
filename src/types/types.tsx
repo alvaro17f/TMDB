@@ -137,3 +137,14 @@ export type ListType = {
   vote_average: number;
   vote_count: number;
 }[];
+
+export type GuestType = {
+  expires_at?: string;
+  guest_session_id?: string;
+  success?: boolean;
+};
+
+export type GuestActionType = {
+  type: string;
+  payload: GuestType;
+};

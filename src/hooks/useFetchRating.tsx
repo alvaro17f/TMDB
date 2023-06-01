@@ -1,18 +1,21 @@
 import { useState } from "react";
 import { RatingProps, RatingType } from "../types/types";
 import { useParams } from "react-router-dom";
+import { useUserContext } from "../Providers/UserProvider";
 
 export const useFetchRating = ({ value }: RatingProps) => {
-  //TODO:
-  const guestId = "ca6c96ee6faea49df91fd2f1fd48ffed";
-
   const [data, setData] = useState<RatingType>();
   const [loading, setLoading] = useState(false);
+
+  const { state } = useUserContext();
+  const guest_session_id = state.guest_session_id;
   const params = useParams();
 
   const URL = `https://api.themoviedb.org/3/movie/${
     params.movieId
-  }/rating?guest_session_id=${guestId}&api_key=${import.meta.env.VITE_API_KEY}`;
+  }/rating?guest_session_id=${guest_session_id}&api_key=${
+    import.meta.env.VITE_API_KEY
+  }`;
 
   const options = {
     method: "POST",
