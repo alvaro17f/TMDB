@@ -6,7 +6,7 @@ const IMG_URL = "https://image.tmdb.org/t/p/original";
 export const HomePage = () => {
   const { data, loading } = useFetchPopular();
 
-  if (loading) return <div className="text-5xl text-center">Loading ...</div>;
+  if (loading) return <div className="mt-5 text-5xl text-center">Loading ...</div>;
   return (
     <section className="grid gap-5 m-10 md:grid-cols-4 place-items-center">
       {data?.map((movie) => (

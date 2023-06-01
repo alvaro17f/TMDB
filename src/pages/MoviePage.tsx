@@ -8,7 +8,7 @@ export const MoviePage = () => {
   const params = useParams();
   const { data: movie, loading } = useFetchMovies(String(params.movieId));
 
-  if (loading) return <div className="text-5xl text-center">Loading ...</div>;
+  if (loading) return <div className="mt-5 text-5xl text-center">Loading ...</div>;
   return (
     <div className="grid grid-cols-[1fr_2fr] m-5">
       <div>

@@ -26,7 +26,11 @@ export const Search = () => {
       />
       <button
         type="submit"
-        className="text-white absolute p-[9px] bg-blue-400 rounded-xl outline-none"
+        className={
+          query
+            ? "text-white absolute p-[9px] bg-blue-400 rounded-xl outline-none"
+            : "text-white absolute p-[9px] bg-slate-400 rounded-xl outline-none cursor-default"
+        }
       >
         Search
       </button>
