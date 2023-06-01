@@ -34,7 +34,7 @@ export const Form = () => {
             rating: {rating * 2}
           </label>
         </div>
-        <button type="submit" className="max-w-lg p-4 rounded-lg bg-slate-400 hover:bg-slate-300 ">
+        <button type="submit" className="max-w-lg p-3 text-xl text-white rounded-lg bg-slate-400 hover:bg-blue-400">
           Submit
         </button>
       </div>
