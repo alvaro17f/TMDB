@@ -5,7 +5,7 @@ import { useUserContext } from "../Providers/UserProvider";
 
 export const Header = () => {
   const { state } = useUserContext();
-  const { request } = useFetchGuest();
+  const { request, error } = useFetchGuest();
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
@@ -18,7 +18,14 @@ export const Header = () => {
       </div>
       <div className="flex items-baseline gap-5 m-auto mr-5 text-gray-800">
         {state?.guest_session_id ? (
-          <p>Expires at: {new Date(state.expires_at as Date).toLocaleDateString()}</p>
+          <p>
+            Expires at:{" "}
+            {new Date(state.expires_at as Date).toLocaleDateString()}
+          </p>
+        ) : error ? (
+          <button type="button" onClick={handleClick}>
+            Error getting an ID
+          </button>
         ) : (
           <button type="button" onClick={handleClick}>
             😀 Get ID

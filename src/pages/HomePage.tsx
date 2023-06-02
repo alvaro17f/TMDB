@@ -4,9 +4,10 @@ import { useFetchPopular } from "../hooks/useFetchPopular";
 const IMG_URL = "https://image.tmdb.org/t/p/original";
 
 export const HomePage = () => {
-  const { data, loading } = useFetchPopular();
+  const { data, loading, error } = useFetchPopular();
 
   if (loading) return <div className="mt-5 text-5xl text-center">Loading ...</div>;
+  if (error) return <div className="mt-5 text-5xl text-center">Error while fetching popular movies</div>;
   return (
     <section className="grid gap-5 m-10 md:grid-cols-4 place-items-center">
       {data?.map((movie) => (

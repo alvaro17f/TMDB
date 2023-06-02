@@ -6,9 +6,25 @@ const IMG_URL = "https://image.tmdb.org/t/p/original";
 
 export const MoviePage = () => {
   const params = useParams();
-  const { data: movie, loading } = useFetchMovies(String(params.movieId));
+  const {
+    data: movie,
+    loading,
+    error,
+  } = useFetchMovies(String(params.movieId));
 
-  if (loading) return <div className="mt-5 text-5xl text-center">Loading ...</div>;
+  if (loading)
+    return <div className="mt-5 text-5xl text-center">Loading ...</div>;
+  if (error)
+    return (
+      <div className="mt-5 text-5xl text-center">
+        Error while fetching movie 😥
+      </div>
+    );
+  if (!movie?.id)
+    return (
+      <div className="mt-5 text-5xl text-center">Film does not exist 😥</div>
+    );
+
   return (
     <div className="grid grid-cols-[1fr_2fr] m-5">
       <div>

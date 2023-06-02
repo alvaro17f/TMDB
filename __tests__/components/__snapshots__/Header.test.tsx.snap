@@ -1,0 +1,49 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Header /> > should match the snapshot 1`] = `
+<div>
+  <header
+    class="flex items-center h-20 pl-5 shadow-md"
+  >
+    <div
+      class="text-5xl text-slate-400"
+    >
+      <a
+        href="/"
+      >
+        TMDB
+      </a>
+    </div>
+    <div
+      class="flex items-baseline gap-5 m-auto mr-5 text-gray-800"
+    >
+      <button
+        type="button"
+      >
+        😀 Get ID
+      </button>
+      <a
+        href="/mylist"
+      >
+        ⭐ List
+      </a>
+      <form
+        class="flex flex-row-reverse"
+      >
+        <input
+          class="flex-1 p-2 border rounded-xl focus:outline-none"
+          placeholder="John Wick"
+          type="search"
+          value=""
+        />
+        <button
+          class="text-white absolute p-[9px] bg-slate-400 rounded-xl outline-none cursor-default"
+          type="submit"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+  </header>
+</div>
+`;

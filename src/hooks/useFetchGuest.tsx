@@ -4,6 +4,7 @@ import { setLocalStorage } from "../utils/localStorage";
 
 export const useFetchGuest = () => {
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<unknown>();
   const { dispatch } = useUserContext();
 
   const URL = `https://api.themoviedb.org/3/authentication/guest_session/new?api_key=${
@@ -26,8 +27,8 @@ export const useFetchGuest = () => {
         );
       })
       .finally(() => setLoading(false))
-      .catch((err) => console.error(err));
+      .catch((err) => setError(err));
   };
 
-  return { loading, request };
+  return { loading, request, error };
 };
