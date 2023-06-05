@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Search } from "./Search";
 import { useFetchGuest } from "../hooks/useFetchGuest";
-import { useUserContext } from "../Providers/UserProvider";
+import { useUserContext } from "../providers/UserProvider";
 
 export const Header = () => {
   const { state } = useUserContext();

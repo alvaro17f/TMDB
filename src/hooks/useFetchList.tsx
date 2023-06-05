@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ListType } from "../types/types";
-import { useUserContext } from "../Providers/UserProvider";
+import { useUserContext } from "../providers/UserProvider";
 
 export const useFetchList = () => {
   const [data, setData] = useState<ListType>();

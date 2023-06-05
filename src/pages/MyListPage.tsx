@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useFetchList } from "../hooks/useFetchList";
-import { useUserContext } from "../Providers/UserProvider";
+import { useUserContext } from "../providers/UserProvider";
 import { useFetchGuest } from "../hooks/useFetchGuest";
 
 const IMG_URL = "https://image.tmdb.org/t/p/original";

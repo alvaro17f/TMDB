@@ -12,7 +12,7 @@ import { HomePage } from "../../src/pages/HomePage";
 import { MoviePage } from "../../src/pages/MoviePage";
 import { server } from "../../src/mocks/server";
 import { rest } from "msw";
-import { UserProvider } from "../../src/Providers/UserProvider";
+import { UserProvider } from "../../src/providers/UserProvider";
 
 const wrapper = (
   <UserProvider>

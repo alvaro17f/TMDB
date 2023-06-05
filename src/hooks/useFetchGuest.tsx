@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useUserContext } from "../Providers/UserProvider";
+import { useUserContext } from "../providers/UserProvider";
 import { setLocalStorage } from "../utils/localStorage";
 
 export const useFetchGuest = () => {

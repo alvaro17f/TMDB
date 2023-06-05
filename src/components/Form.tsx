@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useFetchRating } from "../hooks/useFetchRating";
-import { useUserContext } from "../Providers/UserProvider";
+import { useUserContext } from "../providers/UserProvider";
 import { useFetchGuest } from "../hooks/useFetchGuest";
 
 export const Form = () => {

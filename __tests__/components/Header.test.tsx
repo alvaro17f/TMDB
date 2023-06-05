@@ -11,9 +11,7 @@ import { Header } from "../../src/components/Header";
 import { MyListPage } from "../../src/pages/MyListPage";
 import { SearchPage } from "../../src/pages/SearchPage";
 import { Routes, Route, MemoryRouter } from "react-router-dom";
-import { UserProvider } from "../../src/Providers/UserProvider";
-import { server } from "../../src/mocks/server";
-import { rest } from "msw";
+import { UserProvider } from "../../src/providers/UserProvider";
 
 const wrapper = (
   <UserProvider>

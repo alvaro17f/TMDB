@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { RatingProps, RatingType } from "../types/types";
 import { useParams } from "react-router-dom";
-import { useUserContext } from "../Providers/UserProvider";
+import { useUserContext } from "../providers/UserProvider";
 
 export const useFetchRating = ({ value }: RatingProps) => {
   const [data, setData] = useState<RatingType>();
